@@ -4,9 +4,9 @@ React application that will load a list of users from this api https://randomuse
 
 - Store the result of the request and display the information in a grid of cards styled.
 - Include following functionality in the list:
-- A search bar that will filter the list based on the user input.
-- Ability to sort the list by one of the fields.
-- Ability to edit a list item and have the card update with the new information (only in local state not through the api)
+  - A search bar that will filter the list based on the user input.
+  - Ability to sort the list by one of the fields.
+  - Ability to edit a list item and have the card update with the new information (only in local state not through the api)
 
 ## Available Scripts
 
