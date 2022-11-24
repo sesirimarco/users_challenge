@@ -1,0 +1,15 @@
+/* COLORS */
+$white: #fff;
+$primary: rgb(64, 108, 255);
+$primary-dark: darken($primary, 20%);
+$secondary: rgb(126, 119, 119);
+$info: #d1ecf1;
+$danger: #f8d7da;
+$text-primary: rgb(126, 119, 119);
+$text-info: #0c5460;
+$text-danger: #721c24;
+$box-shadow: rgba(107, 103, 103, 0.4);
+
+/* FONTS */
+$fonts: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
