@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './index.css';
 import SearchUsers from './components/SearchUsers';
 import SortUsers from './components/SortUsers';
 import User from './components/User';
@@ -27,6 +26,7 @@ export default function App() {
   React.useEffect(() => {
     const getUsers = async () => {
       setIsLoading(true);
+      setHasError(false);
       try {
         const response = await fetch('https://randomuser.me/api/?results=10');
         const data = await response.json();
@@ -40,7 +40,6 @@ export default function App() {
       }
       setIsLoading(false);
     };
-    console.log(1);
     getUsers();
   }, []);
 

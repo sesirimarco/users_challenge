@@ -1,0 +1,154 @@
+@import '_variables';
+@import '_mixins';
+
+body {
+  margin: 0;
+  font-family: $fonts;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1,
+p {
+  font-family: Lato;
+}
+.users-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 300px;
+}
+.card-user {
+  margin: 1rem;
+  text-align: center;
+  display: inline-block;
+  width: 300px;
+  min-height: 325px;
+  border-radius: 5px;
+  background-color: $white;
+  color: $text-primary;
+  overflow: hidden;
+  box-shadow: 1px 1px 15px 1px $box-shadow;
+  padding-bottom: 1.5rem;
+  .user-edit-icon {
+    padding-left: 0.7rem;
+    padding-top: 0.55rem;
+    color: $white;
+    position: absolute;
+    transform: scale(1.8);
+  }
+  .header {
+    width: 100%;
+    height: 108px;
+    background-color: $primary;
+  }
+  .user-name {
+    color: $white;
+    margin-top: -92px;
+    height: 44px;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+  .avatar {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+
+    border: 4px solid $white;
+    display: inline-block;
+    overflow: hidden;
+    margin-top: -2px;
+  }
+  img {
+    width: 100%;
+  }
+
+  .card-body {
+    margin-top: 25px;
+  }
+  .card-body-item {
+    cursor: pointer;
+    height: 20px;
+  }
+  .card-body-item-editable {
+    height: 16px;
+    font-family: Lato;
+    color: $secondary;
+    font-size: 1rem;
+    box-shadow: 1px 1px 15px 1px $box-shadow;
+    width: 60%;
+    background-color: $white;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid $secondary;
+    outline: none;
+  }
+
+  .user-name-editable {
+    color: $white;
+    margin-bottom: 14px;
+    font-family: sans-serif;
+    font-size: 1.18rem;
+    width: 60%;
+    background-color: $primary-dark;
+    border: 1px solid;
+    border-radius: 5px;
+    text-align: center;
+    outline: none;
+    box-shadow: 1px 1px 15px 1px $box-shadow;
+  }
+}
+
+.filter-users {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.filter-search {
+  padding: 0.33em 0.75em;
+  margin-left: 0.33rem;
+}
+.alert {
+  display: flex;
+  border-radius: 4px;
+  width: 100%;
+  justify-content: center;
+  height: fit-content;
+  &.alert-error {
+    color: $text-danger;
+    background-color: $danger;
+    border-color: $danger;
+  }
+  &.alert-info {
+    color: $text-info;
+    background-color: $info;
+    border-color: $info;
+  }
+}
+
+@include medium-screens() {
+  .filter-users {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.spinner-icon {
+  height: 16px;
+  margin: auto;
+  animation-name: spinning;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
